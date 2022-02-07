@@ -3,7 +3,6 @@ gsap.timeline()
         rotation: -45
     }, {
         rotation: 45,
-        // duration: 1,
         delay: 0.3
     })
     .to('#racket', {
