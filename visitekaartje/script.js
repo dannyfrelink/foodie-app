@@ -15,6 +15,6 @@ gsap.from('#visitekaartje', {
     y: '7vw',
     transformOrigin: '0% 0%',
     duration: 1.5,
-    delay: 0.45
+    delay: 0.5
 })
 
