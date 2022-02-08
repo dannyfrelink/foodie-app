@@ -66,17 +66,6 @@ header p {
     font-style: italic;
 }
 
-
-
-
-
-/* section>p {
-    width: 85%;
-    margin: 1em auto;
-    color: #006864;
-} */
-
-
 /* Achterkant visitekaartje */
 section {
     background: linear-gradient(0deg, rgba(0,104,100,1) 50%, rgba(255,255,255,1) 50%);
