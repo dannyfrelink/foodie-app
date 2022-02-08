@@ -9,7 +9,7 @@ gsap.timeline()
         opacity: 0
     })
 
-gsap.from('#visitekaartje', {
+gsap.from('#business_card', {
     scale: 0.3,
     x: '-19vw',
     y: '7vw',
@@ -18,20 +18,20 @@ gsap.from('#visitekaartje', {
     delay: 0.5
 })
 
-const main = document.querySelector('main')
+const businessCard = document.querySelector('main')
 
-gsap.set('.balk', {
+gsap.set('.beam', {
     rotation: 180,
     transformOrigin: '50% 50%',
 })
 
-main.addEventListener('mouseenter', () => {
-    gsap.from('.balk', {
+businessCard.addEventListener('mouseenter', () => {
+    gsap.from('.beam', {
         height: 0,
         stagger: 0.2
     })
 
-    gsap.from('.tekst_balk', {
+    gsap.from('.text_beam', {
         opacity: 0,
         stagger: 0.2,
         delay: 0.3
