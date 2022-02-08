@@ -79,6 +79,14 @@ section {
     backface-visibility: hidden;
 }
 
+section h3 {
+    position: absolute;
+    font-size: 1.3em;
+    top: 5%;
+    left: 48.5%;
+    color: #006864;
+}
+
 section a {
     color: #006864;
 }

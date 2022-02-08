@@ -18,3 +18,20 @@ gsap.from('#visitekaartje', {
     delay: 0.5
 })
 
+const main = document.querySelector('main')
+
+gsap.set('.balk', {
+    rotation: 180,
+    transformOrigin: '50% 50%',
+})
+
+main.addEventListener('mouseenter', () => {
+    gsap.timeline()
+        .from('.balk', {
+            height: 0,
+            stagger: 0.2
+        })
+        .from('.tekst_balk', {
+            opacity: 0
+        })
+})
