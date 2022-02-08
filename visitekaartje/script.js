@@ -26,12 +26,14 @@ gsap.set('.balk', {
 })
 
 main.addEventListener('mouseenter', () => {
-    gsap.timeline()
-        .from('.balk', {
-            height: 0,
-            stagger: 0.2
-        })
-        .from('.tekst_balk', {
-            opacity: 0
-        })
+    gsap.from('.balk', {
+        height: 0,
+        stagger: 0.2
+    })
+
+    gsap.from('.tekst_balk', {
+        opacity: 0,
+        stagger: 0.2,
+        delay: 0.3
+    })
 })
