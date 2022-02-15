@@ -1,13 +1,14 @@
 import { fetchWithBarcode } from './script.js';
 
 const startScanButton = document.querySelector('#start_scan');
+const header = document.querySelector('header');
 const closeButton = document.querySelector('#close_button');
 const videoDiv = document.querySelector('#video')
 
 startScanButton.addEventListener('click', startDetecting);
 
 async function startDetecting() {
-    startScanButton.style.display = "none";
+    header.style.display = "none";
     closeButton.style.display = 'inline-block';
 
     const barcodeDetector = new BarcodeDetector();
