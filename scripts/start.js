@@ -1,12 +1,16 @@
 import { fetchWithBarcode } from './script.js';
 
-window.onload = () => {
-    detect();
-};
+const startScanButton = document.querySelector('#start_scan');
+const closeButton = document.querySelector('#close_button');
+const videoDiv = document.querySelector('#video')
 
-async function detect() {
+startScanButton.addEventListener('click', startDetecting);
+
+async function startDetecting() {
+    startScanButton.style.display = "none";
+    closeButton.style.display = 'inline-block';
+
     const barcodeDetector = new BarcodeDetector();
-    const barcodeScanner = document.getElementById('barcode_scanner');
     let itemsFound = [];
     const mediaStream = await navigator.mediaDevices.getUserMedia({
         video: { facingMode: 'environment' },
@@ -18,7 +22,7 @@ async function detect() {
     video.srcObject = mediaStream;
     video.autoplay = true;
 
-    barcodeScanner.before(video);
+    videoDiv.append(video)
 
     const render = () => {
         barcodeDetector
@@ -29,6 +33,10 @@ async function detect() {
                         itemsFound.push(barcode.rawValue);
                         barcodeValue = barcode.rawValue;
                         fetchWithBarcode(barcodeValue);
+
+                        barcodeDetector.release();
+                        startScanButton.style.display = "flex";
+                        closeButton.style.display = 'none';
                     }
                 });
             })
@@ -41,3 +49,5 @@ async function detect() {
     }
     renderLoop();
 }
+
+export { startScanButton, closeButton, videoDiv }

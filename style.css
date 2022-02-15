@@ -3,8 +3,51 @@
     margin: 0;
 }
 
+body {
+    background-color: #161623;
+    color: white;
+}
+
+main {
+    margin: auto;
+    width: 90vw;
+    text-align: center;
+}
+
+#start_scan {
+    display: flex;
+    align-items: center;
+    padding: 0.5em;
+    font-size: 1em;
+    border: 1px solid white;
+    border-radius: 1em;
+    background-color: #8D8DE0;
+    color: white;
+    margin: 5vh auto;
+}
+
+#start_scan img {
+    width: 1.5em;
+    margin-right: 0.3em;
+}
+
+#close_button {
+    display: none;
+}
+
+#close_button::after {
+    position: absolute;
+    right: 0.45em;
+    top: 0.3em;
+    content: "\00d7";
+    color: white;
+    line-height: 0.8em;
+    font-size: 3em;
+    z-index: 1;
+}
+
 video {
-    width: 100vw;
+    height: 100vh;
 }
 
 
