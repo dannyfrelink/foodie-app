@@ -1,10 +1,10 @@
-import { startScanButton, closeButton, videoDiv } from "./start.js"
+import { header, section, videoDiv } from "./start.js"
 
 const stopDetecting = () => {
-    startScanButton.style.display = "flex";
-    closeButton.style.display = "none";
+    header.style.display = "flex";
+    section.style.display = "none";
     videoDiv.innerHTML = ''
 
 }
 
-closeButton.addEventListener('click', stopDetecting);
+document.querySelector('#close_button').addEventListener('click', stopDetecting);

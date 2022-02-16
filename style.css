@@ -26,10 +26,27 @@ header {
 }
 
 main {
+    display: none;
     position: absolute;
-    top: 0;
+    top: -100vh;
     z-index: -1;
     width: 100vw;
+}
+
+main.infaden {
+    display: block;
+    animation-name: infaden;
+    animation-duration: 2.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes infaden {
+    from {
+        top: -100vh;
+    }
+    to {
+        top: 0;
+    }
 }
 
 h1 {
@@ -41,7 +58,7 @@ h1 {
     align-items: center;
     padding: 0.65em 0.75em;
     font-size: 1.5em;
-    border: 1px solid white;
+    border: 3px solid white;
     border-radius: 1em;
     background-color: #8D8DE0;
     color: white;
@@ -56,12 +73,15 @@ h1 {
 section {
     height: 7.5vh;
     display: flex;
+    justify-content: center;
     align-items: center;
     background-color: #8D8DE0;
+    border-bottom: 3px solid #161623;
 }
 
 #close_button {
-    display: none;
+    position: absolute;
+    right: 5vw;
     background: none;
     border: none;
     font-size: 3em;
@@ -75,14 +95,5 @@ section {
 
 video {
     display: block;
-    height: 100vh;
+    height: calc(92.5vh - 3px);
 }
-
-
-/* video {
-    display: none;
-}
-
-.show {
-    display: block;
-} */
