@@ -39,7 +39,7 @@ async function startDetecting() {
                         barcodeValue = barcode.rawValue;
                         fetchWithBarcode(barcodeValue);
 
-                        // video.autoplay = paused;
+                        videoDiv.innerHTML = ''
                         header.style.display = "flex";
                         section.style.display = 'none';
                     }
