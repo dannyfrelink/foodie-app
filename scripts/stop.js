@@ -1,8 +1,8 @@
-import { header, section, videoDiv } from "./start.js"
+import { header, main, videoDiv } from "./start.js"
 
 const stopDetecting = () => {
-    header.style.display = "flex";
-    section.style.display = "none";
+    header.classList.remove('hidden');
+    main.classList.remove('infaden');
     videoDiv.innerHTML = '';
 }
 
