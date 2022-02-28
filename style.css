@@ -105,8 +105,8 @@ video {
     position: absolute;
     left: 45vw;
     top: calc(50vh - 5vw);
-    border: 0.5em solid #f3f3f3; /* Light grey */
-    border-top: 0.5em solid #3498db; /* Blue */
+    border: 0.5em solid white;
+    border-top: 0.5em solid #8D8DE0;
     border-radius: 50%;
     width: 10vw;
     height: 10vw;
