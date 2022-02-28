@@ -1,3 +1,10 @@
-export default function checkBarcode() {
-    console.log(data)
+
+
+export default function checkBarcode(data) {
+    if (data.status_verbose === 'product found') {
+        insertProduct(data)
+    }
+    else {
+        errorState()
+    }
 }
