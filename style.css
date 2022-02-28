@@ -64,7 +64,7 @@ h1 {
     font-size: 1.3em;
     border: 2px solid white;
     border-radius: 0.8em;
-    margin: 5vh auto;
+    margin: 2.084em auto;
     padding: 0.35em 0.55em;
 }
 
@@ -77,13 +77,13 @@ h1 {
     font-size: 1.5em;
     border: 3px solid white;
     border-radius: 1em;
-    margin: 10vh auto 0;
+    margin: 4.169em auto 0;
     padding: 0.65em 0.75em;
 }
 
 /* Barcode scanner part */
 nav {
-    height: 7.5vh;
+    height: 3.127em;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -107,7 +107,7 @@ nav {
 
 video {
     display: block;
-    height: calc(92.5vh - 3px);
+    height: calc(100vh - 3.127em - 3px);
 }
 
 .hidden {
@@ -116,13 +116,13 @@ video {
 
 #loader {
     position: absolute;
-    left: 45vw;
-    top: calc(50vh - 5vw);
+    left: calc(50vw - 2.34em / 2);
+    top: calc(50vh - 2.34em / 2);
     border: 0.5em solid white;
     border-top: 0.5em solid #8D8DE0;
     border-radius: 50%;
-    width: 10vw;
-    height: 10vw;
+    width: 2.34em;
+    height: 2.34em;
     animation: spin 2s linear infinite;
 }
   
@@ -135,11 +135,11 @@ video {
 #product_info {
     width: 90vw;
     height: fit-content;
-    margin: 7.5vh auto;
+    margin: 3.127em auto;
 }
 
 #product_info>*~* {
-    margin-top: 2.5vh;
+    margin-top: 1.042em;
 }
 
 #product_info h2,
@@ -168,16 +168,33 @@ video {
 /* Error state part */
 #error_state {
     position: absolute;
-    left: calc(50vw - 40vw);
-    top: calc(50vh - 35vh);
+    left: calc(50vw - 18.75em / 2);
+    top: calc(50vh - 11.25em / 2);
     background-color: white;
     color: #161623;
-    width: 80vw;
-    height: 60vh;
+    width: 18.75em;
+    height: 11.25em;
     z-index: 1;
 }
 
 #error_state>* {
-    width: 90%;
+    width: 80%;
     margin: 1em auto 0;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em !important;
+}
+
+input[type="button"] {
+    width: fit-content;
+    font-size: 0.9em;
+    background-color: #8D8DE0;
+    color: #161623;
+    border: 1.5px solid #161623;
+    border-radius: 0.4em;
+    padding: 0.3em;
+    margin-top: 0.5em;
 }
