@@ -6,7 +6,6 @@ export function fetchWithBarcode(barcodeValue) {
             console.log(data);
         })
         .catch((err) => {
-            // if something goes wrong, the error is displayed in the console
             console.error(err);
         });
 }
