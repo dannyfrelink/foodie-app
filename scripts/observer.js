@@ -5,7 +5,6 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
         if (!entry.isIntersecting) {
             return;
         } else {
-            console.log(entry.target)
             loader.classList.add('hidden');
         }
     })
