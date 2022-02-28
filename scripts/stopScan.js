@@ -1,4 +1,4 @@
-import { header, main, videoDiv, loader } from "./start.js"
+import { header, main, videoDiv, loader } from "./startScan.js"
 
 const stopDetecting = () => {
     header.classList.remove('hidden');
