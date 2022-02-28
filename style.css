@@ -8,6 +8,10 @@ body {
     overflow: hidden;
 }
 
+.overflow_visible {
+    overflow-y: auto;
+}
+
 body {
     background-color: #161623;
     color: white;
@@ -15,16 +19,13 @@ body {
     position: relative;
 }
 
-header, main {
-    height: 100vh;
-    margin: auto;
-    text-align: center;
-}
-
 header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: auto;
+    text-align: center;
+    height: 100vh;
     width: 90vw;
 }
 
@@ -136,9 +137,14 @@ video {
 
 article {
     width: 90vw;
-    margin: auto;
+    height: fit-content;
+    margin: 7.5vh auto;
 }
 
 article>img {
     width: 90vw;
+}
+
+article ul {
+    text-align: left;
 }

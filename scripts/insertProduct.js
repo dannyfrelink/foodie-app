@@ -1,13 +1,24 @@
+import { body, h2, img, p, ul } from './variables.js'
+
 export default function insertProduct(data) {
     const productInfo = data.product;
-
-    const h2 = document.querySelector('article h2');
-    const img = document.querySelector('article>img');
-    const p = document.querySelector('article p');
+    const ingredients = productInfo.ingredients_text_en;
+    const ingredientsArray = ingredients.split(',');
 
     h2.innerHTML = productInfo.abbreviated_product_name;
     img.src = productInfo.image_url;
     p.innerHTML = 'test';
+    ingredientsArray.forEach(ingredient => {
+        let listItem = document.createElement('li');
+        if (ingredient !== '') {
+            listItem.innerHTML = ingredient;
+            ul.appendChild(listItem);
+        }
+    })
 
-    console.log(data);
+    // console.log(listItem)
+
+
+
+    console.log(productInfo.ingredients_text_en);
 }
