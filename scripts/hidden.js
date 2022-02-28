@@ -1,7 +1,7 @@
 import { body, header, barcodeSection, videoDiv, loader, articleProduct, errorArticle } from './variables.js';
 
 const showBarcodeSection = () => {
-    body.classList.remove('overflow_visible')
+    body.classList.remove('overflow_visible');
     header.classList.add('hidden');
     barcodeSection.classList.add('infaden');
     loader.classList.remove('hidden');
@@ -9,7 +9,7 @@ const showBarcodeSection = () => {
 }
 
 const showProductSection = () => {
-    body.classList.add('overflow_visible')
+    body.classList.add('overflow_visible');
     videoDiv.innerHTML = '';
     barcodeSection.classList.remove('infaden');
     loader.classList.add('hidden');

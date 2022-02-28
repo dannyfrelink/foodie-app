@@ -1,4 +1,4 @@
-import checkBarcode from './checkBarcode.js'
+import checkBarcode from './checkBarcode.js';
 
 export function fetchWithBarcode(barcodeValue) {
     let barcode = barcodeValue;

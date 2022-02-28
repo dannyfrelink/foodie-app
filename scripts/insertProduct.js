@@ -4,7 +4,7 @@ import barcodeInput from './searchBarcode.js';
 
 export default function insertProduct(data) {
     showProductSection();
-    barcodeInput.value = ''
+    barcodeInput.value = '';
 
     const productInfo = data.product;
     const ingredients = productInfo.ingredients_text_en;

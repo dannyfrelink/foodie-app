@@ -1,13 +1,13 @@
 import { fetchWithBarcode } from './script.js';
 import { startScanButton, videoDiv } from './variables.js';
-import { showBarcodeSection, showProductSection } from './hidden.js'
+import { showBarcodeSection } from './hidden.js'
 
 startScanButton.forEach(button => {
     button.addEventListener('click', startDetecting);
 });
 
 async function startDetecting() {
-    showBarcodeSection()
+    showBarcodeSection();
 
     const barcodeDetector = new BarcodeDetector();
     let itemsFound = [];
