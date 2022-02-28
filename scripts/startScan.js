@@ -1,15 +1,13 @@
 import { fetchWithBarcode } from './script.js';
-import { startScanButton, header, barcodeSection, videoDiv, loader, articleProduct } from './variables.js'
+import { startScanButton, videoDiv } from './variables.js';
+import { showBarcodeSection, showProductSection } from './hidden.js'
 
 startScanButton.forEach(button => {
     button.addEventListener('click', startDetecting);
 });
 
 async function startDetecting() {
-    header.classList.add('hidden');
-    barcodeSection.classList.add('infaden');
-    loader.classList.remove('hidden');
-    articleProduct.classList.add('hidden');
+    showBarcodeSection()
 
     const barcodeDetector = new BarcodeDetector();
     let itemsFound = [];
@@ -34,11 +32,7 @@ async function startDetecting() {
                         itemsFound.push(barcode.rawValue);
                         barcodeValue = barcode.rawValue;
                         fetchWithBarcode(barcodeValue);
-
-                        videoDiv.innerHTML = '';
-                        barcodeSection.classList.remove('infaden');
-                        loader.classList.add('hidden');
-                        articleProduct.classList.remove('hidden');
+                        showProductSection()
                     }
                 });
             })

@@ -1,4 +1,4 @@
-import { videoDiv, loader } from "./startScan.js";
+import { videoDiv, loader } from "./variables.js";
 
 const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
     entries.forEach(entry => {
