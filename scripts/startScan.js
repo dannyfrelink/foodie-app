@@ -51,5 +51,3 @@ async function startDetecting() {
     }
     renderLoop();
 }
-
-export { header, barcodeSection, videoDiv, loader, articleProduct }
