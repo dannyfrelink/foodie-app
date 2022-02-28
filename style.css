@@ -76,7 +76,7 @@ section {
     justify-content: center;
     align-items: center;
     background-color: #8D8DE0;
-    border-bottom: 3px solid #161623;
+    border-bottom: 3px solid white;
 }
 
 #close_button {

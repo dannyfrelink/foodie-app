@@ -26,7 +26,7 @@ async function startDetecting() {
     video.srcObject = mediaStream;
     video.autoplay = true;
 
-    videoDiv.append(video)
+    videoDiv.append(video);
 
     const render = () => {
         barcodeDetector
