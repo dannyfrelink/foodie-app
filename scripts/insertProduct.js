@@ -1,3 +1,3 @@
-export default function insertProduct() {
-    console.log('test')
+export default function insertProduct(data) {
+    console.log(data);
 }

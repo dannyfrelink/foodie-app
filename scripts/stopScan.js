@@ -1,8 +1,8 @@
-import { header, main, videoDiv, loader } from "./startScan.js"
+import { header, barcodeSection, videoDiv, loader } from "./startScan.js"
 
 const stopDetecting = () => {
     header.classList.remove('hidden');
-    main.classList.remove('infaden');
+    barcodeSection.classList.remove('infaden');
     videoDiv.innerHTML = '';
     loader.classList.add('hidden');
 }
