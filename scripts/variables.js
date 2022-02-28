@@ -18,6 +18,8 @@ const ulIngredients = document.querySelector('#product_info section:first-of-typ
 const ulAllergies = document.querySelector('#product_info section:nth-of-type(2) ul');
 
 // Error state part
-const errorArticle = document.querySelector('#error_state');
+const errorPopup = document.querySelector('#error_popup');
+const closePopup = document.querySelector('#close_popup');
+const invalidBarcode = document.querySelector('#invalid_code');
 
-export { body, startScanButton, header, barcodeSection, videoDiv, loader, articleProduct, nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies, errorArticle }
+export { body, startScanButton, header, barcodeSection, videoDiv, loader, articleProduct, nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies, errorPopup, closePopup, invalidBarcode }

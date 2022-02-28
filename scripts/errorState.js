@@ -1,5 +1,9 @@
-import { errorArticle } from "./variables.js";
+import { closePopup, errorPopup } from "./variables.js";
 
 export default function errorState() {
-    errorArticle.classList.remove('hidden');
+    errorPopup.classList.remove('hidden');
 }
+
+closePopup.addEventListener('click', () => {
+    errorPopup.classList.add('hidden');
+})

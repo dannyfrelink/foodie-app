@@ -166,6 +166,17 @@ video {
 }
 
 /* Error state part */
+#close_popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: ' ';
+    background: rgba(0,0,0,.5);
+    z-index: 1;
+}
+
 #error_state {
     position: absolute;
     left: calc(50vw - 18.75em / 2);
@@ -173,19 +184,18 @@ video {
     background-color: white;
     color: #161623;
     width: 18.75em;
-    height: 11.25em;
+    height: fit-content;
     z-index: 1;
 }
 
 #error_state>* {
     width: 80%;
-    margin: 1em auto 0;
+    margin: 1em auto;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1em !important;
 }
 
 input[type="button"] {
@@ -194,6 +204,10 @@ input[type="button"] {
     color: #161623;
     border: 1.5px solid #161623;
     border-radius: 0.4em;
-    padding: 0.3em;
     margin-top: 0.5em;
+    padding: 0.3em;
+}
+
+#invalid_code {
+    color: red;
 }
