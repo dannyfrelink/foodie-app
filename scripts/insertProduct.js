@@ -28,8 +28,4 @@ export default function insertProduct(data) {
             ulAllergies.appendChild(listItemAllergy);
         }
     })
-
-
-
-    console.log(productInfo);
 }
