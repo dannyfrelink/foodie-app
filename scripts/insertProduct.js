@@ -1,7 +1,10 @@
-import { nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies } from './variables.js'
+import { nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies } from './variables.js';
+import { showProductSection } from './hidden.js';
+import barcodeInput from './searchBarcode.js';
 
 export default function insertProduct(data) {
     showProductSection();
+    barcodeInput.value = ''
 
     const productInfo = data.product;
     const ingredients = productInfo.ingredients_text_en;

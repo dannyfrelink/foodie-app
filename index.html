@@ -55,8 +55,13 @@
         </article>
 
         <!-- Error state part -->
-        <article>
-
+        <article id="error_state" class="hidden">
+            <h3>Sorry, can't find this barcode.</h3>
+            <p>Try typing in the barcode number down below:</p>
+            <form action="#">
+                <input type="text">
+                <input type="button">
+            </form>
         </article>
     </main>
 
@@ -65,6 +70,7 @@
     <script type="module" src="./scripts/startScan.js"></script>
     <script type="module" src="./scripts/stopScan.js"></script>
     <script type="module" src="./scripts/observer.js"></script>
+    <script type="module" src="./scripts/searchBarcode.js"></script>
 </body>
 
 </html>

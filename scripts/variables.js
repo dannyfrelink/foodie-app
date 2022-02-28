@@ -17,4 +17,7 @@ const quantityProduct = document.querySelector('#product_info p');
 const ulIngredients = document.querySelector('#product_info section:first-of-type ul');
 const ulAllergies = document.querySelector('#product_info section:nth-of-type(2) ul');
 
-export { body, startScanButton, header, barcodeSection, videoDiv, loader, articleProduct, nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies }
+// Error state part
+const errorArticle = document.querySelector('#error_state');
+
+export { body, startScanButton, header, barcodeSection, videoDiv, loader, articleProduct, nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies, errorArticle }

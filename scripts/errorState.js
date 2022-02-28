@@ -1,3 +1,5 @@
+import { errorArticle } from "./variables.js";
+
 export default function errorState() {
-    console.log('error')
+    errorArticle.classList.remove('hidden')
 }

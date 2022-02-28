@@ -61,11 +61,6 @@ h1 {
     align-items: center;
     background-color: #8D8DE0;
     color: white;
-
-
-
-
-
     font-size: 1.3em;
     border: 2px solid white;
     border-radius: 0.8em;
@@ -86,6 +81,7 @@ h1 {
     padding: 0.65em 0.75em;
 }
 
+/* Barcode scanner part */
 nav {
     height: 7.5vh;
     display: flex;
@@ -135,35 +131,53 @@ video {
     100% { transform: rotate(360deg); }
 }
 
-article {
+/* Product info part */
+#product_info {
     width: 90vw;
     height: fit-content;
     margin: 7.5vh auto;
 }
 
-article>*~* {
+#product_info>*~* {
     margin-top: 2.5vh;
 }
 
-article h2,
-article p,
-article ul {
+#product_info h2,
+#product_info p,
+#product_info ul {
     width: 85%;
 }
 
-article>img {
+#product_info>img {
     width: 90vw;
 }
 
-article p {
+#product_info p {
     font-style: italic;
 }
 
-article ul {
+#product_info ul {
     text-align: left;
     list-style-position: inside;
 }
 
-article ul li {
+#product_info ul li {
     margin-top: 0.15em;
+}
+
+/* Error state part */
+#error_state {
+    position: absolute;
+    left: calc(50vw - 40vw);
+    top: calc(50vh - 35vh);
+    background-color: white;
+    color: #161623;
+    width: 80vw;
+    height: 60vh;
+    z-index: 1;
+}
+
+#error_state>* {
+    width: 90%;
+    margin: 1em auto 0;
 }

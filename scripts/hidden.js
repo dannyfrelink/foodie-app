@@ -1,4 +1,4 @@
-import { body, header, barcodeSection, videoDiv, loader, articleProduct } from './variables.js';
+import { body, header, barcodeSection, videoDiv, loader, articleProduct, errorArticle } from './variables.js';
 
 const showBarcodeSection = () => {
     body.classList.remove('overflow_visible')
@@ -14,6 +14,7 @@ const showProductSection = () => {
     barcodeSection.classList.remove('infaden');
     loader.classList.add('hidden');
     articleProduct.classList.remove('hidden');
+    errorArticle.classList.add('hidden');
 }
 
 export { showBarcodeSection, showProductSection }
