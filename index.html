@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <!-- Landing page part -->
     <header>
         <h1>FOODIE SCANNER</h1>
 
@@ -19,6 +20,7 @@
         </button>
     </header>
     <main>
+        <!-- Barcode scanner part -->
         <section>
             <nav>
                 <h2>
@@ -30,7 +32,8 @@
         </section>
         <div id="loader" class="hidden"></div>
 
-        <article class="hidden">
+        <!-- Product info part -->
+        <article id="product_info" class="hidden">
             <h2></h2>
             <img alt="Product image">
             <p></p>
@@ -49,6 +52,11 @@
                 <img src="images/barcode.png" alt="Barcode icon">
                 Scan code
             </button>
+        </article>
+
+        <!-- Error state part -->
+        <article>
+
         </article>
     </main>
 

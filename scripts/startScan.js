@@ -32,7 +32,6 @@ async function startDetecting() {
                         itemsFound.push(barcode.rawValue);
                         barcodeValue = barcode.rawValue;
                         fetchWithBarcode(barcodeValue);
-                        showProductSection()
                     }
                 });
             })

@@ -1,6 +1,8 @@
 import { nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies } from './variables.js'
 
 export default function insertProduct(data) {
+    showProductSection();
+
     const productInfo = data.product;
     const ingredients = productInfo.ingredients_text_en;
     const ingredientsArray = ingredients.split(',');
