@@ -141,10 +141,29 @@ article {
     margin: 7.5vh auto;
 }
 
+article>*~* {
+    margin-top: 2.5vh;
+}
+
+article h2,
+article p,
+article ul {
+    width: 85%;
+}
+
 article>img {
     width: 90vw;
 }
 
+article p {
+    font-style: italic;
+}
+
 article ul {
     text-align: left;
+    list-style-position: inside;
+}
+
+article ul li {
+    margin-top: 0.15em;
 }

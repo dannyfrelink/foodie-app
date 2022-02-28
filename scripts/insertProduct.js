@@ -1,24 +1,33 @@
-import { body, h2, img, p, ul } from './variables.js'
+import { nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies } from './variables.js'
 
 export default function insertProduct(data) {
     const productInfo = data.product;
     const ingredients = productInfo.ingredients_text_en;
     const ingredientsArray = ingredients.split(',');
+    const allergies = productInfo.allergens_imported;
+    const allergiesArray = allergies.split(',');
 
-    h2.innerHTML = productInfo.abbreviated_product_name;
-    img.src = productInfo.image_url;
-    p.innerHTML = 'test';
+    nameProduct.innerHTML = productInfo.product_name;
+    imgProduct.src = productInfo.image_url;
+    quantityProduct.innerHTML = `Quantity: ${productInfo.quantity}`;
+
     ingredientsArray.forEach(ingredient => {
-        let listItem = document.createElement('li');
+        let listItemIngredient = document.createElement('li');
         if (ingredient !== '') {
-            listItem.innerHTML = ingredient;
-            ul.appendChild(listItem);
+            listItemIngredient.innerHTML = ingredient;
+            ulIngredients.appendChild(listItemIngredient);
         }
     })
 
-    // console.log(listItem)
+    allergiesArray.forEach(allergy => {
+        let listItemAllergy = document.createElement('li');
+        if (allergy !== '') {
+            listItemAllergy.innerHTML = allergy;
+            ulAllergies.appendChild(listItemAllergy);
+        }
+    })
 
 
 
-    console.log(productInfo.ingredients_text_en);
+    console.log(productInfo);
 }
