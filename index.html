@@ -13,7 +13,7 @@
     <header>
         <h1>FOODIE SCANNER</h1>
 
-        <button class="start_scan">
+        <button id="start_scan" class="scan_button">
             <img src="images/barcode.png" alt="Barcode icon">
             Scan code
         </button>
@@ -30,7 +30,15 @@
         </section>
         <div id="loader" class="hidden"></div>
 
-        <article></article>
+        <article class="hidden">
+            <button class="scan_button">
+                <img src="images/barcode.png" alt="Barcode icon">
+                Scan code
+            </button>
+            <h2></h2>
+            <img alt="Product image">
+            <p></p>
+        </article>
     </main>
 
 

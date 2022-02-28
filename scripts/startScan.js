@@ -1,20 +1,15 @@
 import { fetchWithBarcode } from './script.js';
+import { startScanButton, header, barcodeSection, videoDiv, loader, articleProduct } from './variables.js'
 
-// Landing part
-const startScanButton = document.querySelector('.start_scan');
-const header = document.querySelector('header');
-
-// Scanner part
-const barcodeSection = document.querySelector('section');
-const videoDiv = document.querySelector('#video');
-const loader = document.querySelector('#loader');
-
-startScanButton.addEventListener('click', startDetecting);
+startScanButton.forEach(button => {
+    button.addEventListener('click', startDetecting);
+});
 
 async function startDetecting() {
     header.classList.add('hidden');
     barcodeSection.classList.add('infaden');
     loader.classList.remove('hidden');
+    articleProduct.classList.add('hidden');
 
     const barcodeDetector = new BarcodeDetector();
     let itemsFound = [];
@@ -43,6 +38,7 @@ async function startDetecting() {
                         videoDiv.innerHTML = '';
                         barcodeSection.classList.remove('infaden');
                         loader.classList.add('hidden');
+                        articleProduct.classList.remove('hidden');
                     }
                 });
             })
@@ -56,4 +52,4 @@ async function startDetecting() {
     renderLoop();
 }
 
-export { header, barcodeSection, videoDiv, loader }
+export { header, barcodeSection, videoDiv, loader, articleProduct }

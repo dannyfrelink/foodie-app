@@ -55,21 +55,34 @@ h1 {
     font-size: 70px;
 }
 
-.start_scan {
+.scan_button {
     display: flex;
     align-items: center;
-    padding: 0.65em 0.75em;
+    background-color: #8D8DE0;
+    color: white;
+
+
+
+
+
+    font-size: 1.3em;
+    border: 2px solid white;
+    border-radius: 0.8em;
+    margin: 5vh auto;
+    padding: 0.35em 0.55em;
+}
+
+.scan_button img {
+    width: 2em;
+    margin-right: 0.3em;
+}
+
+#start_scan {
     font-size: 1.5em;
     border: 3px solid white;
     border-radius: 1em;
-    background-color: #8D8DE0;
-    color: white;
     margin: 10vh auto 0;
-}
-
-.start_scan img {
-    width: 2em;
-    margin-right: 0.3em;
+    padding: 0.65em 0.75em;
 }
 
 nav {
@@ -119,4 +132,13 @@ video {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+article {
+    width: 90vw;
+    margin: auto;
+}
+
+article>img {
+    width: 90vw;
 }
