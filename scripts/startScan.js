@@ -5,7 +5,7 @@ const startScanButton = document.querySelector('#start_scan');
 const header = document.querySelector('header');
 
 // Scanner part
-const barcodeSection = document.querySelector('main>section');
+const barcodeSection = document.querySelector('section');
 const videoDiv = document.querySelector('#video');
 const loader = document.querySelector('#loader');
 
@@ -41,7 +41,6 @@ async function startDetecting() {
                         fetchWithBarcode(barcodeValue);
 
                         videoDiv.innerHTML = '';
-                        header.classList.remove('hidden');
                         barcodeSection.classList.remove('infaden');
                         loader.classList.add('hidden');
                     }
