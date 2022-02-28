@@ -28,7 +28,6 @@ header {
 main {
     display: none;
     position: absolute;
-    top: -100vh;
     z-index: -1;
     width: 100vw;
 }
@@ -42,7 +41,7 @@ main.infaden {
 
 @keyframes infaden {
     from {
-        top: -100vh;
+        top: -200vh;
     }
     to {
         top: 0;
@@ -100,4 +99,21 @@ video {
 
 .hidden {
     display: none;
+}
+
+#loader {
+    position: absolute;
+    left: 45vw;
+    top: calc(50vh - 5vw);
+    border: 0.5em solid #f3f3f3; /* Light grey */
+    border-top: 0.5em solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    animation: spin 2s linear infinite;
+}
+  
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

@@ -6,13 +6,15 @@ const header = document.querySelector('header');
 
 // Scanner part
 const main = document.querySelector('main');
-const videoDiv = document.querySelector('#video')
+const videoDiv = document.querySelector('#video');
+const loader = document.querySelector('#loader');
 
 startScanButton.addEventListener('click', startDetecting);
 
 async function startDetecting() {
     header.classList.add('hidden');
-    main.classList.add('infaden')
+    main.classList.add('infaden');
+    loader.classList.remove('hidden');
 
     const barcodeDetector = new BarcodeDetector();
     let itemsFound = [];
@@ -41,6 +43,7 @@ async function startDetecting() {
                         videoDiv.innerHTML = '';
                         header.classList.remove('hidden');
                         main.classList.remove('infaden');
+                        loader.classList.add('hidden');
                     }
                 });
             })
@@ -54,4 +57,4 @@ async function startDetecting() {
     renderLoop();
 }
 
-export { header, main, videoDiv }
+export { header, main, videoDiv, loader }
