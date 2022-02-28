@@ -1,7 +1,7 @@
 import { fetchWithBarcode } from './script.js';
 
 // Landing part
-const startScanButton = document.querySelector('#start_scan');
+const startScanButton = document.querySelector('.start_scan');
 const header = document.querySelector('header');
 
 // Scanner part
