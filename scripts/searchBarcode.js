@@ -8,7 +8,6 @@ barcodeInput.addEventListener('keydown', (e) => {
     }
 })
 
-
 const submitBarcode = document.querySelector('input[type="button"]');
 
 submitBarcode.addEventListener('click', () => {
