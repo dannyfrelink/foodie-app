@@ -6,5 +6,3 @@ export default function stopDetecting() {
     videoDiv.innerHTML = '';
     loader.classList.add('hidden');
 }
-
-// document.querySelector('#close_button').addEventListener('click', stopDetecting);

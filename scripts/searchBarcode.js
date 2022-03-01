@@ -1,8 +1,5 @@
-// import { showProductSection } from "./hidden.js";
 import { fetchWithBarcode } from "./fetch.js";
 import { barcodeInput, invalidBarcode, submitBarcode } from "./variables.js";
-
-// barcodeInput.addEventListener('keydown', disableEnter)
 
 export const disableEnter = (e) => {
     invalidBarcode.classList.add('hidden');
@@ -28,7 +25,5 @@ export const fetchSearchvalue = () => {
 
     // console.log(fetchWithBarcode(barcodeInput.value))
 }
-
-// submitBarcode.addEventListener('click', fetchSearchvalue);
 
 export { barcodeInput, submitBarcode };
