@@ -1,6 +1,6 @@
 import { videoDiv, loader } from "./variables.js";
 
-const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
+export const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
     entries.forEach(entry => {
         if (!entry.isIntersecting) {
             return;
@@ -10,5 +10,4 @@ const appearOnScroll = new IntersectionObserver((entries, appearOnScroll) => {
     })
 });
 
-appearOnScroll.observe(videoDiv);
-
+// appearOnScroll.observe(videoDiv);

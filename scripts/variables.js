@@ -9,6 +9,7 @@ const barcodeSection = document.querySelector('main>section');
 const video = document.createElement('video');
 const videoDiv = document.querySelector('#video');
 const loader = document.querySelector('#loader');
+const closeButton = document.querySelector('#close_button')
 
 // Article part
 const articleProduct = document.querySelector('#product_info');
@@ -21,6 +22,8 @@ const ulAllergies = document.querySelector('#product_info section:nth-of-type(2)
 // Error state part
 const errorPopup = document.querySelector('#error_popup');
 const closePopup = document.querySelector('#close_popup');
+const barcodeInput = document.querySelector('input[type="text"]');
+const submitBarcode = document.querySelector('input[type="button"]');
 const invalidBarcode = document.querySelector('#invalid_code');
 
-export { body, startScanButton, header, barcodeSection, video, videoDiv, loader, articleProduct, nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies, errorPopup, closePopup, invalidBarcode }
+export { body, startScanButton, header, barcodeSection, video, videoDiv, loader, closeButton, articleProduct, nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies, errorPopup, closePopup, barcodeInput, submitBarcode, invalidBarcode }

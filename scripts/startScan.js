@@ -1,12 +1,12 @@
-import { fetchWithBarcode } from './script.js';
+import { fetchWithBarcode } from './fetch.js';
 import { startScanButton, video, videoDiv } from './variables.js';
 import { showBarcodeSection } from './hidden.js'
 
-startScanButton.forEach(button => {
-    button.addEventListener('click', startDetecting);
-});
+// startScanButton.forEach(button => {
+//     button.addEventListener('click', startDetecting);
+// });
 
-async function startDetecting() {
+export default async function startDetecting() {
     showBarcodeSection();
 
     const barcodeDetector = new BarcodeDetector();

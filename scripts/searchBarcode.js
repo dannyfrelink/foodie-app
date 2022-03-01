@@ -1,19 +1,20 @@
-import { showProductSection } from "./hidden.js";
-import { fetchWithBarcode } from "./script.js";
-import { invalidBarcode } from "./variables.js";
+// import { showProductSection } from "./hidden.js";
+import { fetchWithBarcode } from "./fetch.js";
+import { barcodeInput, invalidBarcode, submitBarcode } from "./variables.js";
 
-const barcodeInput = document.querySelector('input[type="text"]');
-barcodeInput.addEventListener('keydown', (e) => {
+// barcodeInput.addEventListener('keydown', disableEnter)
+
+export const disableEnter = (e) => {
     invalidBarcode.classList.add('hidden');
     if (e.key === 'Enter') {
         e.preventDefault();
     }
-})
+}
 
-const submitBarcode = document.querySelector('input[type="button"]');
-
-submitBarcode.addEventListener('click', () => {
+export const fetchSearchvalue = () => {
     fetchWithBarcode(barcodeInput.value);
+
+
 
 
 
@@ -26,6 +27,8 @@ submitBarcode.addEventListener('click', () => {
     // }
 
     // console.log(fetchWithBarcode(barcodeInput.value))
-});
+}
+
+// submitBarcode.addEventListener('click', fetchSearchvalue);
 
 export { barcodeInput, submitBarcode };
