@@ -2,7 +2,6 @@ import { submitBarcode } from "./searchBarcode.js";
 import { video } from "./variables.js";
 import { closePopup, errorPopup, invalidBarcode } from "./variables.js";
 
-
 export default function errorState(data) {
     errorPopup.classList.remove('hidden');
     submitBarcode.addEventListener('click', () => {
