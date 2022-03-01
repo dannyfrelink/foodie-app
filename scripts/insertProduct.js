@@ -2,12 +2,6 @@ import { nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies } 
 import { showProductSection } from './hidden.js';
 import { barcodeInput } from './searchBarcode.js';
 
-function removeAllChildNodes(parent) {
-    while (parent.firstChild) {
-        parent.removeChild(parent.firstChild);
-    }
-}
-
 export default function insertProduct(data) {
     showProductSection();
     barcodeInput.value = '';
