@@ -13,13 +13,19 @@ barcodeInput.addEventListener('keydown', (e) => {
 const submitBarcode = document.querySelector('input[type="button"]');
 
 submitBarcode.addEventListener('click', () => {
-    if (fetchWithBarcode(barcodeInput.value) !== undefined) {
-        fetchWithBarcode(barcodeInput.value);
-        showProductSection();
-    }
-    else {
-        invalidBarcode.classList.remove('hidden');
-    }
+    fetchWithBarcode(barcodeInput.value);
+
+
+
+    // if (fetchWithBarcode(barcodeInput.value) !== undefined) {
+    //     fetchWithBarcode(barcodeInput.value);
+    //     showProductSection();
+    // }
+    // else {
+    //     invalidBarcode.classList.remove('hidden');
+    // }
+
+    // console.log(fetchWithBarcode(barcodeInput.value))
 });
 
-export default barcodeInput;
+export { barcodeInput, submitBarcode };

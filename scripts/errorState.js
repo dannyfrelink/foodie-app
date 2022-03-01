@@ -1,7 +1,15 @@
-import { closePopup, errorPopup } from "./variables.js";
+import { submitBarcode } from "./searchBarcode.js";
+import { closePopup, errorPopup, invalidBarcode } from "./variables.js";
 
-export default function errorState() {
+
+export default function errorState(data) {
     errorPopup.classList.remove('hidden');
+    submitBarcode.addEventListener('click', () => {
+        if (data.code === null || data.status_verbose === 'product not found') {
+            invalidBarcode.classList.remove('hidden');
+            console.log('test')
+        }
+    });
 }
 
 closePopup.addEventListener('click', () => {

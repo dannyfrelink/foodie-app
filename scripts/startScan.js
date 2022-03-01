@@ -12,14 +12,16 @@ async function startDetecting() {
     const barcodeDetector = new BarcodeDetector();
     let itemsFound = [];
     const mediaStream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: 'environment' },
+        video: {
+            facingMode: 'environment'
+        }
     });
 
     let barcodeValue;
 
     const video = document.createElement('video');
     video.srcObject = mediaStream;
-    video.autoplay = true;
+    await video.play();
 
     videoDiv.append(video);
 
@@ -32,6 +34,7 @@ async function startDetecting() {
                         itemsFound.push(barcode.rawValue);
                         barcodeValue = barcode.rawValue;
                         fetchWithBarcode(barcodeValue);
+                        video.pause();
                     }
                 });
             })

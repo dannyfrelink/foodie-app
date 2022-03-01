@@ -1,6 +1,6 @@
 import { nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies } from './variables.js';
 import { showProductSection } from './hidden.js';
-import barcodeInput from './searchBarcode.js';
+import { barcodeInput } from './searchBarcode.js';
 
 export default function insertProduct(data) {
     showProductSection();
