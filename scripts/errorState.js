@@ -1,4 +1,5 @@
 import { submitBarcode } from "./searchBarcode.js";
+import { video } from "./variables.js";
 import { closePopup, errorPopup, invalidBarcode } from "./variables.js";
 
 
@@ -14,4 +15,5 @@ export default function errorState(data) {
 
 closePopup.addEventListener('click', () => {
     errorPopup.classList.add('hidden');
+    video.play();
 })

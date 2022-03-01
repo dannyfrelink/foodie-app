@@ -6,6 +6,7 @@ const header = document.querySelector('header');
 
 // Scanner part
 const barcodeSection = document.querySelector('main>section');
+const video = document.createElement('video');
 const videoDiv = document.querySelector('#video');
 const loader = document.querySelector('#loader');
 
@@ -22,4 +23,4 @@ const errorPopup = document.querySelector('#error_popup');
 const closePopup = document.querySelector('#close_popup');
 const invalidBarcode = document.querySelector('#invalid_code');
 
-export { body, startScanButton, header, barcodeSection, videoDiv, loader, articleProduct, nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies, errorPopup, closePopup, invalidBarcode }
+export { body, startScanButton, header, barcodeSection, video, videoDiv, loader, articleProduct, nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies, errorPopup, closePopup, invalidBarcode }

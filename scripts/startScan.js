@@ -1,5 +1,5 @@
 import { fetchWithBarcode } from './script.js';
-import { startScanButton, videoDiv } from './variables.js';
+import { startScanButton, video, videoDiv } from './variables.js';
 import { showBarcodeSection } from './hidden.js'
 
 startScanButton.forEach(button => {
@@ -19,9 +19,9 @@ async function startDetecting() {
 
     let barcodeValue;
 
-    const video = document.createElement('video');
     video.srcObject = mediaStream;
     await video.play();
+
 
     videoDiv.append(video);
 
@@ -47,3 +47,4 @@ async function startDetecting() {
     }
     renderLoop();
 }
+
