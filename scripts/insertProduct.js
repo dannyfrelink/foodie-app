@@ -2,6 +2,12 @@ import { nameProduct, imgProduct, quantityProduct, ulIngredients, ulAllergies } 
 import { showProductSection } from './hidden.js';
 import { barcodeInput } from './searchBarcode.js';
 
+function removeAllChildNodes(parent) {
+    while (parent.firstChild) {
+        parent.removeChild(parent.firstChild);
+    }
+}
+
 export default function insertProduct(data) {
     showProductSection();
     barcodeInput.value = '';
@@ -16,6 +22,7 @@ export default function insertProduct(data) {
     imgProduct.src = productInfo.image_url;
     quantityProduct.innerHTML = `Quantity: ${productInfo.quantity}`;
 
+    ulIngredients.innerHTML = '';
     ingredientsArray.forEach(ingredient => {
         let listItemIngredient = document.createElement('li');
         if (ingredient !== '') {
@@ -24,6 +31,7 @@ export default function insertProduct(data) {
         }
     })
 
+    ulAllergies.innerHTML = '';
     allergiesArray.forEach(allergy => {
         let listItemAllergy = document.createElement('li');
         if (allergy !== '') {
