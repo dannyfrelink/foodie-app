@@ -1,6 +1,6 @@
 import { fetchWithBarcode } from './fetch.js';
-import { video, videoDiv } from './variables.js';
-import { showBarcodeSection } from './hidden.js'
+import { barcodeSection, loader, video, videoDiv } from './variables.js';
+import { showBarcodeSection } from './hidden.js';
 
 export default async function startDetecting() {
     showBarcodeSection();
@@ -18,8 +18,10 @@ export default async function startDetecting() {
     video.srcObject = mediaStream;
     await video.play();
 
-
     videoDiv.append(video);
+
+    loader.classList.add('hidden');
+    barcodeSection.classList.add('infaden');
 
     const render = () => {
         barcodeDetector

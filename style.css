@@ -39,13 +39,13 @@ main>section {
 main>section.infaden {
     display: block;
     animation-name: infaden;
-    animation-duration: 2.5s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
 
 @keyframes infaden {
     from {
-        top: -200vh;
+        top: -100vh;
     }
     to {
         top: 0;

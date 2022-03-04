@@ -1,4 +1,3 @@
-import { appearOnScroll } from "./observer.js";
 import { disableEnter, fetchSearchvalue } from "./searchBarcode.js";
 import startDetecting from "./startScan.js";
 import stopDetecting from "./stopScan.js";
@@ -10,8 +9,6 @@ startScanButton.forEach(button => {
 });
 
 closeButton.addEventListener('click', stopDetecting);
-
-appearOnScroll.observe(videoDiv);
 
 barcodeInput.addEventListener('keydown', disableEnter)
 submitBarcode.addEventListener('click', fetchSearchvalue);
