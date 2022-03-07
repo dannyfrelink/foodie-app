@@ -9,6 +9,7 @@ export const disableEnter = (e) => {
 
 export const fetchSearchvalue = () => {
     window.location.hash = barcodeInput.value;
+    barcodeInput.value = '';
 
 
 

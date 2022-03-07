@@ -1,12 +1,13 @@
-import { barcodeSection, loader, video, videoDiv } from './variables.js';
+import { barcodeSection, video, videoDiv } from './variables.js';
 import { showBarcodeSection } from './hidden.js';
 import { stopLoader } from './loader.js';
+import { stopScanner } from './stopScan.js';
 
 export default async function startDetecting() {
     showBarcodeSection();
 
     const barcodeDetector = new BarcodeDetector();
-    let itemsFound = [];
+    let itemsFound = []
     const mediaStream = await navigator.mediaDevices.getUserMedia({
         video: {
             facingMode: 'environment'
@@ -23,8 +24,8 @@ export default async function startDetecting() {
     stopLoader();
     barcodeSection.classList.add('infaden');
 
-
-    // Tracks ipv video
+    // Tracks weer aanzetten bij off click errorstate
+    // Header laten staan bij error state (zoeken met hash)
     // Wat als mensen hun camera geen toestemming geven
 
 
@@ -37,7 +38,8 @@ export default async function startDetecting() {
                         itemsFound.push(barcode.rawValue);
                         barcodeValue = barcode.rawValue;
                         window.location.hash = barcodeValue;
-                        video.pause();
+                        // video.pause();
+                        stopScanner();
                     }
                 });
             })
@@ -50,4 +52,3 @@ export default async function startDetecting() {
     }
     renderLoop();
 }
-

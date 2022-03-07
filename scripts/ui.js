@@ -1,6 +1,6 @@
 import { disableEnter, fetchSearchvalue } from "./searchBarcode.js";
 import startDetecting from "./startScan.js";
-import stopDetecting from "./stopScan.js";
+import stopDetecting, { stopScanner } from "./stopScan.js";
 import { startScanButton, closeButton, barcodeInput, submitBarcode } from "./variables.js";
 
 export default function addEventListeners() {
@@ -8,6 +8,7 @@ export default function addEventListeners() {
         button.addEventListener('click', startDetecting);
     });
 
+    closeButton.addEventListener('click', stopScanner);
     closeButton.addEventListener('click', stopDetecting);
 
     barcodeInput.addEventListener('keydown', disableEnter)

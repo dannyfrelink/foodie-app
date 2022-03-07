@@ -1,5 +1,7 @@
 // import { submitBarcode } from "./searchBarcode.js";
-import { video } from "./variables.js";
+// import startDetecting from "./startScan.js";
+// import { video } from "./variables.js";
+import { clearHash } from "./router.js";
 import { closePopup, errorPopup, invalidBarcode } from "./variables.js";
 
 export default function errorState(data) {
@@ -16,6 +18,6 @@ export default function errorState(data) {
 }
 
 closePopup.addEventListener('click', () => {
+    clearHash()
     errorPopup.classList.add('hidden');
-    video.play();
-})
+});

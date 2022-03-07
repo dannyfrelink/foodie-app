@@ -17,3 +17,6 @@ const fetchWithRoute = (hash) => {
     fetchWithBarcode(hash);
 }
 
+export const clearHash = () => {
+    window.location.hash = '';
+}
