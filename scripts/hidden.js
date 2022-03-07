@@ -1,9 +1,10 @@
-import { body, header, barcodeSection, videoDiv, loader, articleProduct, errorPopup } from './variables.js';
+import { startLoader } from './loader.js';
+import { body, header, barcodeSection, videoDiv, articleProduct, errorPopup } from './variables.js';
 
 const showBarcodeSection = () => {
     body.classList.remove('overflow_visible');
     header.classList.add('hidden');
-    loader.classList.remove('hidden');
+    startLoader();
     articleProduct.classList.add('hidden');
 }
 

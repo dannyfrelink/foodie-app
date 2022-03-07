@@ -1,5 +1,6 @@
 import { barcodeSection, loader, video, videoDiv } from './variables.js';
 import { showBarcodeSection } from './hidden.js';
+import { stopLoader } from './loader.js';
 
 export default async function startDetecting() {
     showBarcodeSection();
@@ -19,12 +20,12 @@ export default async function startDetecting() {
 
     videoDiv.append(video);
 
-    loader.classList.add('hidden');
+    stopLoader();
     barcodeSection.classList.add('infaden');
+
 
     // Tracks ipv video
     // Wat als mensen hun camera geen toestemming geven
-    // Loader in aparte module
 
 
     const render = () => {
