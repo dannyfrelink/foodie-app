@@ -25,7 +25,7 @@ export default function insertProduct(data) {
         })
     }
     else {
-        ulIngredients.innerHTML = 'none'
+        ulIngredients.innerHTML = 'none';
     }
 
     if (productInfo.allergens_imported) {
@@ -42,6 +42,6 @@ export default function insertProduct(data) {
         })
     }
     else {
-        ulAllergies.innerHTML = 'none'
+        ulAllergies.innerHTML = 'none';
     }
 }

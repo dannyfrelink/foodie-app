@@ -1,4 +1,3 @@
-import { fetchWithBarcode } from "./fetch.js";
 import { barcodeInput, invalidBarcode, submitBarcode } from "./variables.js";
 
 export const disableEnter = (e) => {
@@ -9,7 +8,7 @@ export const disableEnter = (e) => {
 }
 
 export const fetchSearchvalue = () => {
-    fetchWithBarcode(barcodeInput.value);
+    window.location.hash = barcodeInput.value;
 
 
 
