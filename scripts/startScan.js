@@ -38,7 +38,7 @@ export default async function startDetecting() {
                         itemsFound.push(barcode.rawValue);
                         barcodeValue = barcode.rawValue;
                         window.location.hash = barcodeValue;
-                        // video.pause();
+                        video.pause();
                         stopScanner();
                     }
                 });
