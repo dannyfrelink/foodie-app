@@ -1,7 +1,8 @@
+import { closePopupFunction } from "./errorState.js";
 import { disableEnter, fetchSearchvalue } from "./searchBarcode.js";
 import startDetecting from "./startScan.js";
 import stopDetecting, { stopScanner } from "./stopScan.js";
-import { startScanButton, closeButton, barcodeInput, submitBarcode } from "./variables.js";
+import { startScanButton, closeButton, barcodeInput, submitBarcode, closePopup } from "./variables.js";
 
 export default function addEventListeners() {
     startScanButton.forEach(button => {
@@ -13,4 +14,5 @@ export default function addEventListeners() {
 
     barcodeInput.addEventListener('keydown', disableEnter)
     submitBarcode.addEventListener('click', fetchSearchvalue);
+    closePopup.addEventListener('click', closePopupFunction);
 }

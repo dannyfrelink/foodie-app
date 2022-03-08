@@ -1,20 +1,23 @@
 import insertProduct from './insertProduct.js';
-import { errorPopup, submitBarcode } from './variables.js';
+import { errorPopup, invalidBarcode, submitBarcode } from './variables.js';
 import errorMessage from './errorState.js';
 
-function init() {
-    submitBarcode.addEventListener('click', errorMessage)
+function init(data) {
+    const test = data.status;
+    console.log(test);
+    if (test === 0) {
+        submitBarcode.addEventListener('click', errorMessage);
+    }
 }
 
 function check(data) {
-    console.log(data.code)
-    console.log(data.status_verbose)
     if (data.status_verbose === 'product found') {
+        invalidBarcode.classList.add('hidden');
         insertProduct(data);
     }
     else {
         errorPopup.classList.remove('hidden');
-        checkBarcode.init();
+        init(data);
     }
 }
 
