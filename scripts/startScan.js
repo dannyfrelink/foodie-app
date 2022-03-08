@@ -24,8 +24,7 @@ export default async function startDetecting() {
     stopLoader();
     barcodeSection.classList.add('infaden');
 
-    // Tracks weer aanzetten bij off click errorstate
-    // Header laten staan bij error state (zoeken met hash)
+
     // Wat als mensen hun camera geen toestemming geven
 
 
