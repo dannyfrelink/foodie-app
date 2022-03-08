@@ -24,10 +24,6 @@ export default async function startDetecting() {
     stopLoader();
     barcodeSection.classList.add('infaden');
 
-
-    // Wat als mensen hun camera geen toestemming geven
-
-
     const render = () => {
         barcodeDetector
             .detect(video)
