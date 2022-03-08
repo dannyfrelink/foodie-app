@@ -18,6 +18,8 @@ Landing page               |  Scanner page             | Product page
 :-------------------------:|:-------------------------:|:-------------------------:
 ![Landing page](https://github.com/dannyfrelink/foodie-app/blob/main/images/progression-wiki1.png)  |  ![Scanner page](https://github.com/dannyfrelink/foodie-app/blob/main/images/progression-wiki2.png)  |  ![Product page](https://github.com/dannyfrelink/foodie-app/blob/main/images/progression-wiki5.png)
 
+![Control flow v2](https://github.com/dannyfrelink/foodie-app/blob/main/images/control-flow-v2.jpg)
+
 ## ⚙️ Process (Wiki)
 
 You can find all the progression of my work documented in my [Wiki](https://github.com/dannyfrelink/foodie-app/wiki/Progression).
