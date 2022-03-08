@@ -29,6 +29,12 @@ header {
     width: 90vw;
 }
 
+header p {
+    font-size: 150%;
+    font-style: italic;
+    margin-top: 1.5em;
+}
+
 main>section {
     display: none;
     position: absolute;
@@ -77,7 +83,7 @@ h1 {
     font-size: 1.5em;
     border: 3px solid white;
     border-radius: 1em;
-    margin: 4.169em auto 0;
+    margin: 2.5em auto 0;
     padding: 0.65em 0.75em;
 }
 
