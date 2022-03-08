@@ -12,7 +12,7 @@ A product finder by scanning or searching for a barcode.
 
 ## 💡 Concept
 
-My project started off by creating a wireflow for my application. In my wireflow, I created something that really functions as an application. Since the assignment was to create a website that would never load a new page, this would have to be done with hiding and displaying the content that was needed to be shown at that time. I wanted a simple homescreen with an option to start scanning. Followed by a full screen barcode scanner, that shows the scanned product after a successful scan. You can see the happy flow of my application in the pictures below.
+My project started off by creating a wireflow for my application. In my wireflow, I created something that really functions as an application. Since the assignment was to create a website that would never load a new page, this would have to be done with hiding and displaying the content that was needed to be shown at that time. I wanted a simple homescreen with an option to start scanning. Followed by a full screen barcode scanner, that shows the scanned product after a successful scan. I used the data from de [Open Food Facts](https://nl.openfoodfacts.org/data) You can see the happy flow of my application in the pictures below.
 
 Landing page               |  Scanner page             | Product page
 :-------------------------:|:-------------------------:|:-------------------------:
