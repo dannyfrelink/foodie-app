@@ -7,7 +7,7 @@ export async function fetchWithBarcode(barcodeValue) {
         .then((response) => response.json())
         .then((data) => {
             stopLoader();
-            checkBarcode.init(data);
+            checkBarcode.check(data);
         })
         .catch((err) => {
             console.error(err);
