@@ -9,7 +9,7 @@ export default async function startDetecting() {
     showBarcodeSection();
 
     const barcodeDetector = new BarcodeDetector();
-    let itemsFound = []
+    let itemsFound = [];
     const mediaStream = await navigator.mediaDevices.getUserMedia({
         video: {
             facingMode: 'environment'

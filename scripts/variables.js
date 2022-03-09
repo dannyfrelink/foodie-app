@@ -10,7 +10,7 @@ const barcodeSection = document.querySelector('main>section');
 const video = document.createElement('video');
 const videoDiv = document.querySelector('#video');
 const loader = document.querySelector('#loader');
-const closeButton = document.querySelector('#close_button')
+const closeButton = document.querySelector('#close_button');
 
 // Article part
 const articleProduct = document.querySelector('#product_info');

@@ -12,7 +12,7 @@ export default function addEventListeners() {
     closeButton.addEventListener('click', stopScanner);
     closeButton.addEventListener('click', stopDetecting);
 
-    barcodeInput.addEventListener('keydown', disableEnter)
+    barcodeInput.addEventListener('keydown', disableEnter);
     submitBarcode.addEventListener('click', fetchSearchvalue);
     submitBarcode.addEventListener('click', checkIfClicked);
     closePopup.addEventListener('click', closePopupFunction);

@@ -5,7 +5,7 @@ import { errorPopup, invalidBarcode } from "./variables.js";
 let clicked = false;
 export const checkIfClicked = () => {
     clicked = true;
-};
+}
 
 export default function errorMessage(data) {
     const dataStatus = data.status;
@@ -16,7 +16,7 @@ export default function errorMessage(data) {
 }
 
 export const closePopupFunction = () => {
-    clearHash()
+    clearHash();
     errorPopup.classList.add('hidden');
     startDetecting();
 }

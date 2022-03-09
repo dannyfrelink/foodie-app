@@ -8,6 +8,6 @@ export default function checkBarcode(data) {
         insertProduct(data);
     }
     else {
-        errorMessage(data)
+        errorMessage(data);
     }
 }
