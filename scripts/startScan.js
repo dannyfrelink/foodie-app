@@ -2,8 +2,10 @@ import { barcodeSection, video, videoDiv } from './variables.js';
 import { showBarcodeSection } from './hidden.js';
 import { stopLoader } from './loader.js';
 import { stopScanner } from './stopScan.js';
+import { clearHash } from './router.js';
 
 export default async function startDetecting() {
+    clearHash();
     showBarcodeSection();
 
     const barcodeDetector = new BarcodeDetector();
