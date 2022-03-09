@@ -1,4 +1,4 @@
-import { checkBarcode } from './checkBarcode.js';
+import checkBarcode from './checkBarcode.js';
 import { stopLoader } from './loader.js';
 
 export async function fetchWithBarcode(barcodeValue) {
