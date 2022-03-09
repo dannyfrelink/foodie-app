@@ -2,9 +2,9 @@ import insertProduct from './insertProduct.js';
 import { errorPopup, invalidBarcode, submitBarcode } from './variables.js';
 import errorMessage from './errorState.js';
 
-function init(data) {
+async function init(data) {
+    await check(data)
     const test = data.status;
-    console.log(test);
     if (test === 0) {
         submitBarcode.addEventListener('click', errorMessage);
     }
@@ -17,7 +17,6 @@ function check(data) {
     }
     else {
         errorPopup.classList.remove('hidden');
-        init(data);
     }
 }
 
